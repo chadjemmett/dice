@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dice</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<center>
+<%=  link_to "D20", :controller => :dice, :action => :d_20 %>
+<%=  link_to "D12", :controller => :dice, :action => :d_12 %>
+<%= link_to "D10", :controller => :dice, :action => :d_10 %>
+<%=  link_to "D8", :controller => :dice, :action => :d_8 %>
+<%= link_to "D6", :controller => :dice, :action => :d_6 %>
+<%= link_to "D4", :controller => :dice, :action => :d_4 %>
+<%= yield %>
+
+</center>
+</body>
+</html>
